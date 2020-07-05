@@ -60,7 +60,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".w-10 {\n  width: 10%;\n}\n\n.w-15 {\n  width: 15%;\n}\n\n.w-20 {\n  width: 20%;\n}\n\n.w-90 {\n  width: 90%;\n}\n\n", "",{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA;EACE,UAAU;AACZ;;AAEA;EACE,UAAU;AACZ;;AACA;EACE,UAAU;AACZ;;AACA;EACE,UAAU;AACZ","file":"styles.css","sourcesContent":[".w-10 {\n  width: 10%;\n}\n\n.w-15 {\n  width: 15%;\n}\n.w-20 {\n  width: 20%;\n}\n.w-90 {\n  width: 90%;\n}\n\n"]}]);
+exports.push([module.i, ".w-10 {\n  width: 10%;\n}\n\n.w-15 {\n  width: 15%;\n}\n\n.w-20 {\n  width: 20%;\n}\n\n.w-90 {\n  width: 90%;\n}\n", "",{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA;EACE,UAAU;AACZ;;AAEA;EACE,UAAU;AACZ;;AACA;EACE,UAAU;AACZ;;AACA;EACE,UAAU;AACZ","file":"styles.css","sourcesContent":[".w-10 {\n  width: 10%;\n}\n\n.w-15 {\n  width: 15%;\n}\n.w-20 {\n  width: 20%;\n}\n.w-90 {\n  width: 90%;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
