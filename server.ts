@@ -1,5 +1,5 @@
-import  express from 'express';
-import * as mysql from 'mysql';
+const express = require('express');
+const mysql = require('mysql')
 
 const app = express();
 
@@ -18,7 +18,7 @@ connection.connect(function (error: any) {
   }
 })
 
-app.use((req, res, next) => {
+app.use((req: any, res: any, next: any) => {
   res.header('Access-Control-Allow-Origin','*');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.header('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, DELETE');
@@ -31,8 +31,8 @@ app.use((req, res, next) => {
 });
 app.use(express.json());
 
-app.get('/users', (req, res) => {
-  connection.query("select * from user", function (error, rows, fields) {
+app.get('/users', (req: any, res: any) => {
+  connection.query("select * from user", function (error: any, rows: any, fields: any) {
     if(!!error){
       console.log('Query error');
     } else {
@@ -41,8 +41,8 @@ app.get('/users', (req, res) => {
   });
 });
 
-app.get('/messages',(req, res)=>{
-  connection.query(`select * from messages`, function (error, rows, fields) {
+app.get('/messages',(req: any, res: any)=>{
+  connection.query(`select * from messages`, function (error: any, rows: any, fields: any) {
     if(!!error){
       console.log('Query error');
     } else {
@@ -51,8 +51,8 @@ app.get('/messages',(req, res)=>{
   });
 });
 
-app.get('/messageOfUser',(req, res)=>{
-  connection.query(`select * from messages where user_id=${req.query.id}`, function (error,rows,fields) {
+app.get('/messageOfUser',(req: any, res: any)=>{
+  connection.query(`select * from messages where user_id=${req.query.id}`, function (error: any,rows: any,fields: any) {
     if(!!error){
       console.log('Query error');
     } else {
@@ -61,8 +61,8 @@ app.get('/messageOfUser',(req, res)=>{
   });
 });
 
-app.get('/getImage', (req, res)=>{
-  connection.query(`select * from user where id=${req.query.id}`,function (error,rows,fields) {
+app.get('/getImage', (req: any, res: any)=>{
+  connection.query(`select * from user where id=${req.query.id}`,function (error: any,rows: any,fields: any) {
     if(!!error){
       console.log('Query error');
     } else {
@@ -71,12 +71,12 @@ app.get('/getImage', (req, res)=>{
   })
 })
 
-app.post('/sendMessage',(req, res)=>{
-  connection.query(`insert into messages(user_id, message, created_at) values (${req.body.id}, '${req.body.message}', current_timestamp);`,function (error,rows , fields) {
+app.post('/sendMessage',(req: any, res: any)=>{
+  connection.query(`insert into messages(user_id, message, created_at) values (${req.body.id}, '${req.body.message}', current_timestamp);`,function (error: any,rows: any , fields: any) {
     if(!!error){
       console.log('Query Error');
     } else {
-      connection.query(`select * from messages where user_id=${req.body.id}`, function (error,rows,fields) {
+      connection.query(`select * from messages where user_id=${req.body.id}`, function (error: any,rows: any,fields: any) {
         if(!!error){
           console.log('Query error');
         } else {
