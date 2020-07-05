@@ -89,7 +89,11 @@ app.post('/sendMessage',(req: any, res: any)=>{
 
 app.get('/',(req: any, res: any)=>{
   res.sendFile(__dirname+'/dist/ChatBotForIntern/index.html');
-})
+});
+
+app.get('/runtime-es2015.js',(req: any, res: any)=>{
+  res.sendFile(__dirname+'/dist/ChatBotForIntern/runtime-es2015.js');
+});
 
 const PORT = process.env.PORT || 4201
 app.listen(PORT, function () {
