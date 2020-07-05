@@ -1379,10 +1379,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["platformBrowser"]().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])["catch"](function (err) {
       return console.error(err);
     });
-
-    if (screen.width < 426) {
-      screen.orientation.lock('portrait');
-    }
     /***/
 
   },
