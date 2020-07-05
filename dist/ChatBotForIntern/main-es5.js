@@ -97,6 +97,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _classCallCheck(this, AppComponent);
 
       this.title = 'ChatBotForIntern';
+      this.MainUrl = 'https://dazzling-saguaro-21294.herokuapp.com';
     };
 
     AppComponent.ɵfac = function AppComponent_Factory(t) {
@@ -107,10 +108,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       type: AppComponent,
       selectors: [["app-root"]],
       decls: 1,
-      vars: 0,
+      vars: 1,
+      consts: [[3, "MainUrl"]],
       template: function AppComponent_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-main");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-main", 0);
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("MainUrl", ctx.MainUrl);
         }
       },
       directives: [_main_main_component__WEBPACK_IMPORTED_MODULE_1__["MainComponent"]],
@@ -334,9 +340,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, ChatBoxComponent);
 
         this.http = http;
-        this.sendMessageUrl = 'http://localhost:4201/sendMessage';
-        this.getUserMessageUrl = 'http://localhost:4201/messageOfUser?id=';
-        this.getUserImageUrl = 'http://localhost:4201/getImage?id=';
+        this.sendMessageUrl = "".concat(this.MainUrl, "/sendMessage");
+        this.getUserMessageUrl = "".concat(this.MainUrl, "/messageOfUser?id=");
+        this.getUserImageUrl = "".concat(this.MainUrl, "/getImage?id=");
         this.messageList = [];
         this.userList = [];
         this.pendingMsg = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -526,7 +532,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         posOfDisplay: ["positionOfDisplay", "posOfDisplay"],
         nameOfBot: "nameOfBot",
         id: "id",
-        pendingMessages: "pendingMessages"
+        pendingMessages: "pendingMessages",
+        MainUrl: ["MainURL", "MainUrl"]
       },
       outputs: {
         pendingMsg: "pendingMsg",
@@ -644,6 +651,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         pendingMessages: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"],
           args: ['pendingMessages']
+        }],
+        MainUrl: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"],
+          args: ['MainURL']
         }],
         pendingMsg: [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"],
@@ -1073,7 +1084,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("positionOfDisplay", ctx_r5.posOfDisplay[i_r4])("nameOfBot", user_r3.name)("id", user_r3.id)("pendingMessages", ctx_r5.pendingMessages);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("MainURL", ctx_r5.MainUrl)("positionOfDisplay", ctx_r5.posOfDisplay[i_r4])("nameOfBot", user_r3.name)("id", user_r3.id)("pendingMessages", ctx_r5.pendingMessages);
       }
     }
 
@@ -1081,7 +1092,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li");
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, MainComponent_li_4_app_chat_box_1_Template, 1, 4, "app-chat-box", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, MainComponent_li_4_app_chat_box_1_Template, 1, 5, "app-chat-box", 4);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
       }
@@ -1104,8 +1115,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, MainComponent);
 
         this.http = http;
-        this.messageUrl = 'http://localhost:4201/messages';
-        this.usersUrl = 'http://localhost:4201/users';
+        this.messageUrl = "".concat(this.MainUrl, "/messages");
+        this.usersUrl = "".concat(this.MainUrl, "/users");
         this.numberOfPendingMessages = 0;
         this.pendingMessages = [];
         this.screenWidth = window.innerWidth;
@@ -1210,9 +1221,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     MainComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: MainComponent,
       selectors: [["app-main"]],
+      inputs: {
+        MainUrl: "MainUrl"
+      },
       decls: 5,
       vars: 3,
-      consts: [[3, "numberOfPendingMessages", "pressedTimes", "resize"], [1, "list-unstyled"], [4, "ngFor", "ngForOf"], [3, "image", "name", "lastMessage"], [3, "positionOfDisplay", "nameOfBot", "id", "pendingMessages", "lastMessage", "numberOfMessagesUnsent", "pendingMsg", "isClosed", 4, "ngIf"], [3, "positionOfDisplay", "nameOfBot", "id", "pendingMessages", "lastMessage", "numberOfMessagesUnsent", "pendingMsg", "isClosed"]],
+      consts: [[3, "numberOfPendingMessages", "pressedTimes", "resize"], [1, "list-unstyled"], [4, "ngFor", "ngForOf"], [3, "image", "name", "lastMessage"], [3, "MainURL", "positionOfDisplay", "nameOfBot", "id", "pendingMessages", "lastMessage", "numberOfMessagesUnsent", "pendingMsg", "isClosed", 4, "ngIf"], [3, "MainURL", "positionOfDisplay", "nameOfBot", "id", "pendingMessages", "lastMessage", "numberOfMessagesUnsent", "pendingMsg", "isClosed"]],
       template: function MainComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-header", 0);
@@ -1267,7 +1281,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         return [{
           type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
         }];
-      }, null);
+      }, {
+        MainUrl: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"],
+          args: ['MainUrl']
+        }]
+      });
     })();
     /***/
 
@@ -1371,7 +1390,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /home/akrocks/Desktop/ChatBotForIntern/src/main.ts */
+    /*! /home/akrocks/Desktop/chatBot/src/main.ts */
     "./src/main.ts");
     /***/
   }

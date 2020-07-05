@@ -490,8 +490,8 @@ module.exports = exported;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/akrocks/Desktop/ChatBotForIntern/src/styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! /home/akrocks/Desktop/ChatBotForIntern/node_modules/bootstrap/dist/css/bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
+__webpack_require__(/*! /home/akrocks/Desktop/chatBot/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /home/akrocks/Desktop/chatBot/node_modules/bootstrap/dist/css/bootstrap.css */"./node_modules/bootstrap/dist/css/bootstrap.css");
 
 
 /***/ })

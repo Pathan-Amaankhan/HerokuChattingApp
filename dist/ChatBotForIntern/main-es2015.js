@@ -60,11 +60,14 @@ __webpack_require__.r(__webpack_exports__);
 class AppComponent {
     constructor() {
         this.title = 'ChatBotForIntern';
+        this.MainUrl = 'https://dazzling-saguaro-21294.herokuapp.com';
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 1, vars: 0, template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-main");
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 1, vars: 1, consts: [[3, "MainUrl"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-main", 0);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("MainUrl", ctx.MainUrl);
     } }, directives: [_main_main_component__WEBPACK_IMPORTED_MODULE_1__["MainComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -188,9 +191,9 @@ function ChatBoxComponent_li_9_Template(rf, ctx) { if (rf & 1) {
 class ChatBoxComponent {
     constructor(http) {
         this.http = http;
-        this.sendMessageUrl = 'http://localhost:4201/sendMessage';
-        this.getUserMessageUrl = 'http://localhost:4201/messageOfUser?id=';
-        this.getUserImageUrl = 'http://localhost:4201/getImage?id=';
+        this.sendMessageUrl = `${this.MainUrl}/sendMessage`;
+        this.getUserMessageUrl = `${this.MainUrl}/messageOfUser?id=`;
+        this.getUserImageUrl = `${this.MainUrl}/getImage?id=`;
         this.messageList = [];
         this.userList = [];
         this.pendingMsg = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -319,7 +322,7 @@ class ChatBoxComponent {
     }
 }
 ChatBoxComponent.ɵfac = function ChatBoxComponent_Factory(t) { return new (t || ChatBoxComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
-ChatBoxComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ChatBoxComponent, selectors: [["app-chat-box"]], inputs: { posOfDisplay: ["positionOfDisplay", "posOfDisplay"], nameOfBot: "nameOfBot", id: "id", pendingMessages: "pendingMessages" }, outputs: { pendingMsg: "pendingMsg", isClosed: "isClosed", isSend: "isSend", numberOfMessagesUnsent: "numberOfMessagesUnsent", lastMessage: "lastMessage" }, decls: 14, vars: 4, consts: [[1, "align-bottom-right"], [1, "card", "border", 2, "width", "290px"], [1, "card-header", "bg-dark"], ["src", "/assets/images/message-2-16.png", "alt", "m", 1, "p-1"], [1, "card-title", "text-white", "font-weight-bold"], ["src", "/assets/images/closeButton.png", "alt", "c", 1, "float-right", "btn", "bg-white", 3, "click"], [1, "card-header", "overflow-auto", 2, "height", "150px"], [1, "list-unstyled"], [4, "ngFor", "ngForOf"], [1, "form-inline", "p-2"], ["type", "text", 1, "form-control", "form-control-sm"], ["message", ""], ["type", "button", "value", "send", 1, "form-control", "form-control-sm", "btn-sm", "btn-primary", 3, "click"], [1, "pb-5"], [1, "bg-white", "p-2", "shadow-sm", "small", "w-90", "float-left"], [1, "small", "text-black-50"], ["width", "20px", "height", "20px", "src", "/assets/images/car1.jpeg", "alt", "i", 1, "float-right"]], template: function ChatBoxComponent_Template(rf, ctx) { if (rf & 1) {
+ChatBoxComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ChatBoxComponent, selectors: [["app-chat-box"]], inputs: { posOfDisplay: ["positionOfDisplay", "posOfDisplay"], nameOfBot: "nameOfBot", id: "id", pendingMessages: "pendingMessages", MainUrl: ["MainURL", "MainUrl"] }, outputs: { pendingMsg: "pendingMsg", isClosed: "isClosed", isSend: "isSend", numberOfMessagesUnsent: "numberOfMessagesUnsent", lastMessage: "lastMessage" }, decls: 14, vars: 4, consts: [[1, "align-bottom-right"], [1, "card", "border", 2, "width", "290px"], [1, "card-header", "bg-dark"], ["src", "/assets/images/message-2-16.png", "alt", "m", 1, "p-1"], [1, "card-title", "text-white", "font-weight-bold"], ["src", "/assets/images/closeButton.png", "alt", "c", 1, "float-right", "btn", "bg-white", 3, "click"], [1, "card-header", "overflow-auto", 2, "height", "150px"], [1, "list-unstyled"], [4, "ngFor", "ngForOf"], [1, "form-inline", "p-2"], ["type", "text", 1, "form-control", "form-control-sm"], ["message", ""], ["type", "button", "value", "send", 1, "form-control", "form-control-sm", "btn-sm", "btn-primary", 3, "click"], [1, "pb-5"], [1, "bg-white", "p-2", "shadow-sm", "small", "w-90", "float-left"], [1, "small", "text-black-50"], ["width", "20px", "height", "20px", "src", "/assets/images/car1.jpeg", "alt", "i", 1, "float-right"]], template: function ChatBoxComponent_Template(rf, ctx) { if (rf & 1) {
         const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
@@ -371,6 +374,9 @@ ChatBoxComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineC
         }], pendingMessages: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"],
             args: ['pendingMessages']
+        }], MainUrl: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"],
+            args: ['MainURL']
         }], pendingMsg: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"],
             args: ['pendingMsg']
@@ -566,11 +572,11 @@ function MainComponent_li_4_app_chat_box_1_Template(rf, ctx) { if (rf & 1) {
     const i_r4 = ctx_r13.index;
     const user_r3 = ctx_r13.$implicit;
     const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("positionOfDisplay", ctx_r5.posOfDisplay[i_r4])("nameOfBot", user_r3.name)("id", user_r3.id)("pendingMessages", ctx_r5.pendingMessages);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("MainURL", ctx_r5.MainUrl)("positionOfDisplay", ctx_r5.posOfDisplay[i_r4])("nameOfBot", user_r3.name)("id", user_r3.id)("pendingMessages", ctx_r5.pendingMessages);
 } }
 function MainComponent_li_4_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "li");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, MainComponent_li_4_app_chat_box_1_Template, 1, 4, "app-chat-box", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, MainComponent_li_4_app_chat_box_1_Template, 1, 5, "app-chat-box", 4);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const i_r4 = ctx.index;
@@ -581,8 +587,8 @@ function MainComponent_li_4_Template(rf, ctx) { if (rf & 1) {
 class MainComponent {
     constructor(http) {
         this.http = http;
-        this.messageUrl = 'http://localhost:4201/messages';
-        this.usersUrl = 'http://localhost:4201/users';
+        this.messageUrl = `${this.MainUrl}/messages`;
+        this.usersUrl = `${this.MainUrl}/users`;
         this.numberOfPendingMessages = 0;
         this.pendingMessages = [];
         this.screenWidth = window.innerWidth;
@@ -654,7 +660,7 @@ class MainComponent {
     }
 }
 MainComponent.ɵfac = function MainComponent_Factory(t) { return new (t || MainComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
-MainComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MainComponent, selectors: [["app-main"]], decls: 5, vars: 3, consts: [[3, "numberOfPendingMessages", "pressedTimes", "resize"], [1, "list-unstyled"], [4, "ngFor", "ngForOf"], [3, "image", "name", "lastMessage"], [3, "positionOfDisplay", "nameOfBot", "id", "pendingMessages", "lastMessage", "numberOfMessagesUnsent", "pendingMsg", "isClosed", 4, "ngIf"], [3, "positionOfDisplay", "nameOfBot", "id", "pendingMessages", "lastMessage", "numberOfMessagesUnsent", "pendingMsg", "isClosed"]], template: function MainComponent_Template(rf, ctx) { if (rf & 1) {
+MainComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MainComponent, selectors: [["app-main"]], inputs: { MainUrl: "MainUrl" }, decls: 5, vars: 3, consts: [[3, "numberOfPendingMessages", "pressedTimes", "resize"], [1, "list-unstyled"], [4, "ngFor", "ngForOf"], [3, "image", "name", "lastMessage"], [3, "MainURL", "positionOfDisplay", "nameOfBot", "id", "pendingMessages", "lastMessage", "numberOfMessagesUnsent", "pendingMsg", "isClosed", 4, "ngIf"], [3, "MainURL", "positionOfDisplay", "nameOfBot", "id", "pendingMessages", "lastMessage", "numberOfMessagesUnsent", "pendingMsg", "isClosed"]], template: function MainComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-header", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("pressedTimes", function MainComponent_Template_app_header_pressedTimes_0_listener() { return ctx.buttonPressed(); })("resize", function MainComponent_Template_app_header_resize_0_listener($event) { return ctx.getWidth($event); }, false, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresolveWindow"]);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -678,7 +684,10 @@ MainComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
                 templateUrl: './main.component.html',
                 styleUrls: ['./main.component.css']
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }]; }, { MainUrl: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"],
+            args: ['MainUrl']
+        }] }); })();
 
 
 /***/ }),
@@ -744,7 +753,7 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["platformBrowser"]().boot
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/akrocks/Desktop/ChatBotForIntern/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/akrocks/Desktop/chatBot/src/main.ts */"./src/main.ts");
 
 
 /***/ })

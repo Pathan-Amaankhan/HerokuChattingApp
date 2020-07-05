@@ -18899,7 +18899,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function _(module, exports, __webpack_require__) {
     __webpack_require__(
-    /*! /home/akrocks/Desktop/ChatBotForIntern/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js */
+    /*! /home/akrocks/Desktop/chatBot/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js */
     "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js");
 
     __webpack_require__(
@@ -18907,7 +18907,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     "./node_modules/zone.js/dist/zone-legacy.js");
 
     module.exports = __webpack_require__(
-    /*! /home/akrocks/Desktop/ChatBotForIntern/src/polyfills.ts */
+    /*! /home/akrocks/Desktop/chatBot/src/polyfills.ts */
     "./src/polyfills.ts");
     /***/
   }
