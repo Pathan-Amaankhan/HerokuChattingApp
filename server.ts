@@ -119,6 +119,10 @@ app.get('/scripts.js',(req: any, res: any)=>{
   res.sendFile(__dirname+'/dist/ChatBotForIntern/scripts.js');
 });
 
+app.get('/assets/images/car1.jpeg',(req: any, res: any)=>{
+  res.sendFile(__dirname+'/dist/ChatBotForIntern/assets/images/car1.jpeg');
+})
+
 const PORT = process.env.PORT || 4201
 app.listen(PORT, function () {
   console.log('Server Listening on '+PORT);
