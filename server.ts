@@ -31,7 +31,7 @@ app.use((req: any, res: any, next: any) => {
 });
 app.use(express.json());
 
-app.get('/users', (req: any, res: any) => {
+app.get('/undefined/users', (req: any, res: any) => {
   connection.query("select * from user", function (error: any, rows: any, fields: any) {
     if(!!error){
       console.log('Query error');
@@ -41,7 +41,7 @@ app.get('/users', (req: any, res: any) => {
   });
 });
 
-app.get('/messages',(req: any, res: any)=>{
+app.get('/undefined/messages',(req: any, res: any)=>{
   connection.query(`select * from messages`, function (error: any, rows: any, fields: any) {
     if(!!error){
       console.log('Query error');
