@@ -121,6 +121,14 @@ app.get('/scripts.js',(req: any, res: any)=>{
 
 app.get('/assets/images/car1.jpeg',(req: any, res: any)=>{
   res.sendFile(__dirname+'/dist/ChatBotForIntern/assets/images/car1.jpeg');
+});
+
+app.get('/assets/images/closeButton.png',(req: any, res: any)=>{
+  res.sendFile(__dirname+'/dist/ChatBotForIntern/assets/images/closeButton.png');
+});
+
+app.get('/assets/images/message-2-16.png',(req: any, res: any)=>{
+  res.sendFile(__dirname+'/dist/ChatBotForIntern/assets/images/message-2-16.png');
 })
 
 const PORT = process.env.PORT || 4201
