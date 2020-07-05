@@ -413,6 +413,9 @@ __webpack_require__.r(__webpack_exports__);
 class ChatLogComponent {
     constructor() { }
     checkLastMessage() {
+        if (this.lastMessage == undefined) {
+            return 'No Recent Message.';
+        }
         if (this.lastMessage.split(' ').length > 4) {
             this.lastMessage = (this.lastMessage.split(' ').slice(0, 4)).join(' ').concat('...');
         }

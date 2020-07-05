@@ -716,6 +716,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass(ChatLogComponent, [{
         key: "checkLastMessage",
         value: function checkLastMessage() {
+          if (this.lastMessage == undefined) {
+            return 'No Recent Message.';
+          }
+
           if (this.lastMessage.split(' ').length > 4) {
             this.lastMessage = this.lastMessage.split(' ').slice(0, 4).join(' ').concat('...');
           }
