@@ -60,7 +60,7 @@ __webpack_require__.r(__webpack_exports__);
 class AppComponent {
     constructor() {
         this.title = 'ChatBotForIntern';
-        this.MainUrl = 'https://dazzling-saguaro-21294.herokuapp.com';
+        this.MainUrl = 'https://dazzling-saguaro-21294.herokuapp.com/';
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
@@ -191,9 +191,9 @@ function ChatBoxComponent_li_9_Template(rf, ctx) { if (rf & 1) {
 class ChatBoxComponent {
     constructor(http) {
         this.http = http;
-        this.sendMessageUrl = `${this.MainUrl}/sendMessage`;
-        this.getUserMessageUrl = `${this.MainUrl}/messageOfUser?id=`;
-        this.getUserImageUrl = `${this.MainUrl}/getImage?id=`;
+        this.sendMessageUrl = `${this.MainUrl}sendMessage`;
+        this.getUserMessageUrl = `${this.MainUrl}messageOfUser?id=`;
+        this.getUserImageUrl = `${this.MainUrl}getImage?id=`;
         this.messageList = [];
         this.userList = [];
         this.pendingMsg = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -587,8 +587,8 @@ function MainComponent_li_4_Template(rf, ctx) { if (rf & 1) {
 class MainComponent {
     constructor(http) {
         this.http = http;
-        this.messageUrl = `${this.MainUrl}/messages`;
-        this.usersUrl = `${this.MainUrl}/users`;
+        this.messageUrl = `${this.MainUrl}messages`;
+        this.usersUrl = `${this.MainUrl}users`;
         this.numberOfPendingMessages = 0;
         this.pendingMessages = [];
         this.screenWidth = window.innerWidth;
