@@ -107,6 +107,10 @@ app.get('/',(req: any, res: any)=>{
   res.sendFile(__dirname+'/dist/ChatBotForIntern/index.html');
 });
 
+app.get('/favicon.ico',(req: any, res: any)=>{
+  res.sendFile(__dirname+'dist/ChatBotForIntern/favicon.ico');
+});
+
 app.get('/runtime-es2015.js',(req: any, res: any)=>{
   res.sendFile(__dirname+'/dist/ChatBotForIntern/runtime-es2015.js');
 });
