@@ -95,6 +95,30 @@ app.get('/runtime-es2015.js',(req: any, res: any)=>{
   res.sendFile(__dirname+'/dist/ChatBotForIntern/runtime-es2015.js');
 });
 
+app.get('/polyfills-es2015.js',(req: any, res: any)=>{
+  res.sendFile(__dirname+'/dist/ChatBotForIntern/polyfills-es2015.js');
+});
+
+app.get('/styles-es2015.js',(req: any, res: any)=>{
+  res.sendFile(__dirname+'/dist/ChatBotForIntern/styles-es2015.js');
+});
+
+app.get('/vendor-es2015.js',(req: any, res: any)=>{
+  res.sendFile(__dirname+'/dist/ChatBotForIntern/vendor-es2015.js');
+});
+
+app.get('/main-es2015.js',(req: any, res: any)=>{
+  res.sendFile(__dirname+'/dist/ChatBotForIntern/main-es2015.js');
+});
+
+app.get('/runtime-es2015.js.map',(req: any, res: any)=>{
+  res.sendFile(__dirname+'/dist/ChatBotForIntern/runtime-es2015.js.map');
+});
+
+app.get('/scripts.js',(req: any, res: any)=>{
+  res.sendFile(__dirname+'/dist/ChatBotForIntern/scripts.js');
+});
+
 const PORT = process.env.PORT || 4201
 app.listen(PORT, function () {
   console.log('Server Listening on '+PORT);
