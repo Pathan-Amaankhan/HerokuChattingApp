@@ -67,7 +67,7 @@ app.get('/undefined/messages',(req: any, res: any)=>{
   });
 });
 
-app.get('/messageOfUser',(req: any, res: any)=>{
+app.get('/undefined/messageOfUser',(req: any, res: any)=>{
   connection.query(`select * from messages where user_id=${req.query.id}`, function (error: any,rows: any,fields: any) {
     if(!!error){
       console.log('Query error');
@@ -77,7 +77,7 @@ app.get('/messageOfUser',(req: any, res: any)=>{
   });
 });
 
-app.get('/getImage', (req: any, res: any)=>{
+app.get('/undefined/getImage', (req: any, res: any)=>{
   connection.query(`select * from user where id=${req.query.id}`,function (error: any,rows: any,fields: any) {
     if(!!error){
       console.log('Query error');
@@ -87,7 +87,7 @@ app.get('/getImage', (req: any, res: any)=>{
   })
 })
 
-app.post('/sendMessage',(req: any, res: any)=>{
+app.post('/undefined/sendMessage',(req: any, res: any)=>{
   connection.query(`insert into messages(user_id, message, created_at) values (${req.body.id}, '${req.body.message}', current_timestamp);`,function (error: any,rows: any , fields: any) {
     if(!!error){
       console.log('Query Error');
