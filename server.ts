@@ -87,6 +87,10 @@ app.post('/sendMessage',(req: any, res: any)=>{
   });
 });
 
+app.get('/',(req: any, res: any)=>{
+  res.sendFile(__dirname+'/dist/ChatBotForIntern/index.html');
+})
+
 const PORT = process.env.PORT || 4201
 app.listen(PORT, function () {
   console.log('Server Listening on '+PORT);
