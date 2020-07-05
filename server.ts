@@ -4,10 +4,10 @@ const mysql = require('mysql')
 const app = express();
 
 let connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'password',
-  database: 'mydatabase'
+  host: 'us-cdbr-east-02.cleardb.com',
+  user: 'bab8b42fad4e3f',
+  password: '1ff11387',
+  database: 'heroku_add251950d51535'
 });
 
 connection.connect(function (error: any) {
@@ -16,7 +16,7 @@ connection.connect(function (error: any) {
   } else {
     console.log('connected');
   }
-})
+});
 
 app.use((req: any, res: any, next: any) => {
   res.header('Access-Control-Allow-Origin','*');
