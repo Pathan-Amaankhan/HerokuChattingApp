@@ -340,9 +340,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, ChatBoxComponent);
 
         this.http = http;
-        this.sendMessageUrl = "".concat(this.MainUrl, "sendMessage");
-        this.getUserMessageUrl = "".concat(this.MainUrl, "messageOfUser?id=");
-        this.getUserImageUrl = "".concat(this.MainUrl, "getImage?id=");
+        this.sendMessageUrl = "".concat(this.MainUrl, "/sendMessage");
+        this.getUserMessageUrl = "".concat(this.MainUrl, "/messageOfUser?id=");
+        this.getUserImageUrl = "".concat(this.MainUrl, "/getImage?id=");
         this.messageList = [];
         this.userList = [];
         this.pendingMsg = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -1115,8 +1115,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, MainComponent);
 
         this.http = http;
-        this.messageUrl = "".concat(this.MainUrl, "messages");
-        this.usersUrl = "".concat(this.MainUrl, "users");
+        this.messageUrl = "".concat(this.MainUrl, "/messages");
+        this.usersUrl = "".concat(this.MainUrl, "/users");
         this.numberOfPendingMessages = 0;
         this.pendingMessages = [];
         this.screenWidth = window.innerWidth;
